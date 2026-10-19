@@ -103,9 +103,6 @@
 }
 
 /* Leaflet Map Customizations */
-.dark .leaflet-tile {
-  filter: brightness(0.7) invert(1) contrast(2.8) hue-rotate(205deg) saturate(0.35);
-}
 .leaflet-container {
   font-family: 'Plus Jakarta Sans', sans-serif !important;
   background: var(--surface-base) !important;
@@ -159,9 +156,9 @@
   color: #38bdf8 !important;
 }
 
-/* Sleek high-contrast dark mode rendering for OpenStreetMap tiles without API keys or watermarks */
+/* Apply one balanced filter to the tiles so dark mode remains legible. */
 .dark .leaflet-tile-pane {
-  filter: brightness(0.62) invert(1) contrast(3) hue-rotate(200deg) saturate(0.35) brightness(0.75);
+  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9) saturate(0.75);
 }
 
 /* Interactive focus ring for accessibility */
